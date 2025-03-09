@@ -6,28 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="ІС-32 Лємаєва Олександра">
     <title>Контакти</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 </head>
 
-<body style="background-color: bisque; background-size: 100%; color: #333; font-family: 'Georgia', serif;">
-    <h1>
-        <font size="6" color="darkorange">Контактна інформація</font>
-    </h1>
-    <form>
-        <font size="4">
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="nav_link">Головна</a>
+            <a href="gallery.html" class="nav_link">Галерея</a>
+            <a href="about.html" class="nav_link">Про нас</a>
+            <a href="contact.html" class="nav_link">Контакти</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Контактна інформація</h1>
+        <form>
             <label><b>Ім'я:</b></label>
             <input type="text"><br>
             <label><b>Email:</b></label>
             <input type="email"><br>
             <label><i>Повідомлення:</i></label>
             <textarea></textarea><br>
-            <button type="submit">
-                <font color="white" size="4">Надіслати</font>
-            </button>
-        </font>
-    </form>
-    <a href="index.html">
-        <font size="4" color="darkblue"><b>Назад на головну</b></font>
-    </a>
+            <button type="submit">Надіслати</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+    </footer>
+
 </body>
 
 </html>

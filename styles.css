@@ -1,0 +1,172 @@
+body {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: #cdfffd;
+    color: #000000;
+}
+
+.header {
+    background-color: #004650;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav_link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav_link:hover {
+    color: #653ffc;
+}
+
+.main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.main_title {
+    font-size: 35px;
+    color: #368a80;
+}
+
+.main_descr {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.main_subtitle {
+    font-size: 25px;
+    color: #113949;
+    margin-top: 30px;
+}
+
+.frame_container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.frame {
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    border: 3px solid #84f5e8;
+}
+
+.indx_gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.indx_gallery_item {
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.indx_gallery_item:hover {
+    transform: scale(1.1);
+}
+
+.indx_gallery_img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: #004650;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.gallery_item {
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery_item:hover {
+    transform: scale(1.1);
+}
+
+.gallery_img {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#galleryTable {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    border: 2px solid #25655e54;
+    background: #abdddb;
+}
+
+.table_row {
+    border: 2px solid #25655e54;
+}
+
+.table_cell {
+    border: 2px solid #25655e54;
+}
+
+.table_caption {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.table_header {
+    background-color: #264653;
+    color: white;
+}
+
+.table_img {
+    width: 150px;
+}
+
+.table_link {
+    text-decoration: none;
+    color: #264653;
+    font-weight: bold;
+}
+
+.table_link:hover {
+    color: #653ffc;
+}
+
+.main_link {
+    text-decoration: none;
+    color: #264653;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.main_link:hover {
+    color: #653ffc;
+}

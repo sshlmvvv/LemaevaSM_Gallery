@@ -6,87 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="ІС-32 Лємаєва Олександра">
     <title>Галерея картин</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 </head>
 
-<body
-    style="background-color: #f0e6d2; background-image: url('background_gallery.jpg'); background-size: contain; background-repeat: no-repeat; background-position: top center; color: #222; font-family: 'Georgia', serif; text-align: center;">
+<body>
 
-    <h1 id="galeryTitle" style="font-size: 28px; color: darkblue;">Галерея картин</h1>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="nav_link">Головна</a>
+            <a href="gallery.html" class="nav_link">Галерея</a>
+            <a href="about.html" class="nav_link">Про нас</a>
+            <a href="contact.html" class="nav_link">Контакти</a>
+        </nav>
+    </header>
 
-    <p style="font-size: 18px; color: purple;">Перегляньте ці шедеври мистецтва!</p>
-    <a href="#galleryTable" style="font-size: 18px; color: brown; font-weight: bold;">Перейти до таблиці картин</a>
+    <main class="main">
+        <h1 class="main_title">Галерея картин</h1>
+        <p class="main_descr">Перегляньте ці шедеври мистецтва!</p>
+        <a href="#galleryTable" class="main_link">Перейти до таблиці картин</a>
 
+        <ul class="gallery">
+            <li class="gallery_item">
+                <a href="images/monalisa_large.jpg" target="_blank">
+                    <img src="images/monalisa_small.jpg" alt="Мона Ліза" class="gallery_img">
+                </a>
+            </li>
+            <li class="gallery_item">
+                <a href="images/starrynight_large.jpg" target="_blank">
+                    <img src="images/starrynight_small.jpg" alt="Зоряна ніч" class="gallery_img">
+                </a>
+            </li>
+            <li class="gallery_item">
+                <a href="images/thescream_large.jpg" target="_blank">
+                    <img src="images/thescream_small.jpg" alt="Крик" class="gallery_img">
+                </a>
+            </li>
+            <li class="gallery_item">
+                <a href="images/lastsupper_large.jpg" target="_blank">
+                    <img src="images/lastsupper_small.jpg" alt="Таємна вечеря" class="gallery_img">
+                </a>
+            </li>
+        </ul>
 
-    <ul style="list-style-type: none; padding: 0;">
-        <li>
-            <a href="images/monalisa_large.jpg" target="_blank">
-                <img src="images/monalisa_small.jpg" width="20%" height="20%" alt="Мона Ліза">
-            </a>
-        </li>
-        <li>
-            <a href="images/starrynight_large.jpg" target="_blank">
-                <img src="images/starrynight_small.jpg" width="25%" height="25%" alt="Зоряна ніч">
-            </a>
-        </li>
-        <li>
-            <a href="images/thescream_large.jpg" target="_blank">
-                <img src="images/thescream_small.jpg" width="20%" height="20%" alt="Крик">
-            </a>
-        </li>
-        <li>
-            <a href="images/lastsupper_large.jpg" target="_blank">
-                <img src="images/lastsupper_small.jpg" width="25%" height="25%" alt="Таємна вечеря">
-            </a>
-        </li>
-    </ul>
+        <table id="galleryTable" class="table">
+            <caption class="table_caption">Відомі картини і трошки про них</caption>
+            <tr class="table_row">
+                <th class="table_header">Мона Ліза</th>
+                <th class="table_header">Зоряна ніч</th>
+                <th class="table_header">Крик</th>
+                <th class="table_header">Таємна вечеря</th>
+            </tr>
+            <tr class="table_row">
+                <td class="table_cell"><img src="images/monalisa_small.jpg" alt="Мона Ліза" class="table_img"></td>
+                <td class="table_cell"><img src="images/starrynight_small.jpg" alt="Зоряна ніч" class="table_img">
+                </td>
+                <td class="table_cell"><img src="images/thescream_small.jpg" alt="Крик" class="table_img"></td>
+                <td class="table_cell"><img src="images/lastsupper_small.jpg" alt="Таємна вечеря" class="table_img">
+                </td>
+            </tr>
+            <tr class="table_row">
+                <td class="table_cell"><a href="https://uk.wikipedia.org/wiki/Мона_Ліза" target="_blank"
+                        class="table_link">Про Мону Лізу</a></td>
+                <td class="table_cell"><a href="https://uk.wikipedia.org/wiki/Зоряна_ніч_(картина)" target="_blank"
+                        class="table_link">Про Зоряну ніч</a></td>
+                <td class="table_cell"><a href="https://uk.wikipedia.org/wiki/Крик_(картина)" target="_blank"
+                        class="table_link">Про Крик</a></td>
+                <td class="table_cell"><a href="https://uk.wikipedia.org/wiki/Таємна_вечеря_(Леонардо_да_Вінчі)"
+                        target="_blank" class="table_link">Про Таємну вечерю</a></td>
+            </tr>
+            <tr class="table_row">
+                <td class="table_cell">Автор: Леонардо да Вінчі</td>
+                <td class="table_cell">Автор: Вінсент ван Гог</td>
+                <td class="table_cell">Автор: Едвард Мунк</td>
+                <td class="table_cell">Автор: Леонардо да Вінчі</td>
+            </tr>
+        </table>
+    </main>
 
-    <table id="galleryTable" style="width: 80%; margin: 20px auto; border-collapse: collapse; border: 2px solid #333;">
-        <caption style="font-size: 22px; color: darkblue; font-weight: bold; margin-bottom: 10px;">Відомі картини і
-            трошки про них</caption>
-        <tr>
-            <th
-                style="background-color: #8b6f47; color: white; font-size: 18px; border: 1px solid #333; padding: 10px;">
-                Мона Ліза</th>
-            <th
-                style="background-color: #8b6f47; color: white; font-size: 18px; border: 1px solid #333; padding: 10px;">
-                Зоряна ніч</th>
-            <th
-                style="background-color: #8b6f47; color: white; font-size: 18px; border: 1px solid #333; padding: 10px;">
-                Крик</th>
-            <th
-                style="background-color: #8b6f47; color: white; font-size: 18px; border: 1px solid #333; padding: 10px;">
-                Таємна вечеря</th>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #333; padding: 10px;"><img src="images/monalisa_small.jpg" width="50%"
-                    height="20%" alt="Мона Ліза"></td>
-            <td style="border: 1px solid #333; padding: 10px;"><img src="images/starrynight_small.jpg" width="60%"
-                    height="20%" alt="Зоряна ніч"></td>
-            <td style="border: 1px solid #333; padding: 10px;"><img src="images/thescream_small.jpg" width="20%"
-                    height="20%" alt="Крик"></td>
-            <td style="border: 1px solid #333; padding: 10px;"><img src="images/lastsupper_small.jpg" width="100%"
-                    height="100%" alt="Таємна вечеря"></td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #333; padding: 10px;"><a href="https://uk.wikipedia.org/wiki/Мона_Ліза"
-                    target="_blank">Про Мону Лізу</a></td>
-            <td style="border: 1px solid #333; padding: 10px;"><a
-                    href="https://uk.wikipedia.org/wiki/Зоряна_ніч_(картина)" target="_blank">Про Зоряну ніч</a></td>
-            <td style="border: 1px solid #333; padding: 10px;"><a href="https://uk.wikipedia.org/wiki/Крик_(картина)"
-                    target="_blank">Про Крик</a></td>
-            <td style="border: 1px solid #333; padding: 10px;"><a
-                    href="https://uk.wikipedia.org/wiki/Таємна_вечеря_(Леонардо_да_Вінчі)" target="_blank">Про Таємну
-                    вечерю</a></td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #333; padding: 10px;">Автор: Леонардо да Вінчі</td>
-            <td style="border: 1px solid #333; padding: 10px;">Автор: Вінсент ван Гог</td>
-            <td style="border: 1px solid #333; padding: 10px;">Автор: Едвард Мунк</td>
-            <td style="border: 1px solid #333; padding: 10px;">Автор: Леонардо да Вінчі</td>
-        </tr>
-    </table>
-
-    <a href="index.html" style="font-size: 18px; color: brown; font-weight: bold">Назад на головну</a>
+    <footer class="footer">
+    </footer>
 
 </body>
 

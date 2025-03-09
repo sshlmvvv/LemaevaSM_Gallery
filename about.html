@@ -1,81 +1,91 @@
 <!DOCTYPE html>
 <html lang="uk">
 
-<head>
+<>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="ІС-32 Лємаєва Олександра">
     <title>Про нас</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 </head>
 
-<body style="background-color: bisque; background-size: 100%; color: #333; font-family: 'Georgia', serif;">
+<body>
 
-    <h1>Про галерею</h1>
-    <p>Наша картинна галерея була заснована у <b>2010 році</b> та відтоді приймає тисячі відвідувачів щороку.</p>
-    <p>Ми експонуємо картини як класичних, так і сучасних художників.
-        <a href="https://www.louvre.fr/" target="_blank" style="color: darkred;">Перейдіть на сайт Лувру</a>, щоб
-        побачити найвідоміші шедеври.
-    </p>
-    <ol>
-        <li>Лувр (Франція)</li>
-        <li>Метрополітен-музей (США)</li>
-        <li>Національна галерея (Велика Британія)</li>
-        <li>Прадо (Іспанія)</li>
-    </ol>
-    <ul>
-        <li>Ренесанс</li>
-        <li>Бароко</li>
-        <li>Імпресіонізм</li>
-        <li>Кубізм</li>
-        <li>Сюрреалізм</li>
-    </ul>
-    <dl>
-        <dt>Леонардо да Вінчі</dt>
-        <dd>Мона Ліза, Таємна вечеря</dd>
-    
-        <dt>Вінсент ван Гог</dt>
-        <dd>Зоряна ніч, Соняшники</dd>
-    
-        <dt>Едвард Мунк</dt>
-        <dd>Крик</dd>
-    
-        <dt>Пабло Пікассо</dt>
-        <dd>Герніка, Дівчина перед дзеркалом</dd>
-    </dl>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="nav_link">Головна</a>
+            <a href="gallery.html" class="nav_link">Галерея</a>
+            <a href="about.html" class="nav_link">Про нас</a>
+            <a href="contact.html" class="nav_link">Контакти</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Про галерею</h1>
+        <p>Наша картинна галерея була заснована у <b>2010 році</b> та відтоді приймає тисячі відвідувачів щороку.</p>
+        <p>Ми експонуємо картини як класичних, так і сучасних художників.
+            <a href="https://www.louvre.fr/" target="_blank">Перейдіть на сайт Лувру</a>, щоб
+            побачити найвідоміші шедеври.
+        </p>
+        <ol>
+            <li>Лувр (Франція)</li>
+            <li>Метрополітен-музей (США)</li>
+            <li>Національна галерея (Велика Британія)</li>
+            <li>Прадо (Іспанія)</li>
+        </ol>
+        <ul>
+            <li>Ренесанс</li>
+            <li>Бароко</li>
+            <li>Імпресіонізм</li>
+            <li>Кубізм</li>
+            <li>Сюрреалізм</li>
+        </ul>
+        <dl>
+            <dt>Леонардо да Вінчі</dt>
+            <dd>Мона Ліза, Таємна вечеря</dd>
 
+            <dt>Вінсент ван Гог</dt>
+            <dd>Зоряна ніч, Соняшники</dd>
 
+            <dt>Едвард Мунк</dt>
+            <dd>Крик</dd>
 
-    <table style="width: 90%; margin: 20px auto; border-collapse: collapse; border: 2px solid #333; text-align: left;">
-        <colgroup>
-            <col span="1">
-            <col span="2" style="background-color: #f8f8ff;">
-        </colgroup>
-        <tr>
-            <th colspan="3" style="background-color: #6a5acd; color: white; border: 1px solid #555; padding: 10px;">
-                Історія галереї та відомі художники</th>
-        </tr>
-        <tr>
-            <th style="background-color: #6a5acd; color: white; border: 1px solid #555; padding: 10px;">Рік заснування
-            </th>
-            <th style="background-color: #6a5acd; color: white; border: 1px solid #555; padding: 10px;">Основні напрямки
-                мистецтва</th>
-            <th style="background-color: #6a5acd; color: white; border: 1px solid #555; padding: 10px;">Відомі художники
-            </th>
-        </tr>
-        <tr>
-            <td rowspan="2" style="border: 1px solid #555; padding: 10px; background-color: #f4e1d2;">2010</td>
-            <td style="border: 1px solid #555; padding: 10px;">Класичний живопис</td>
-            <td style="border: 1px solid #555; padding: 10px;">Леонардо да Вінчі, Рембрандт</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #555; padding: 10px;">Сучасний живопис</td>
-            <td style="border: 1px solid #555; padding: 10px;">Ван Гог, Мунк</td>
-        </tr>
-    </table>
+            <dt>Пабло Пікассо</dt>
+            <dd>Герніка, Дівчина перед дзеркалом</dd>
+        </dl>
 
-    <a href="gallery.html#galleryTable" style="font-size: 18px; color: brown; font-weight: bold;">Перейти до галереї картин</a>
+        <table>
+            <colgroup>
+                <col span="1">
+                <col span="2">
+            </colgroup>
+            <tr>
+                <th colspan="3">Історія галереї та відомі художники</th>
+            </tr>
+            <tr>
+                <th>Рік заснування</th>
+                <th>Основні напрямки мистецтва</th>
+                <th>Відомі художники</th>
+            </tr>
+            <tr>
+                <td rowspan="2">2010</td>
+                <td>Класичний живопис</td>
+                <td>Леонардо да Вінчі, Рембрандт</td>
+            </tr>
+            <tr>
+                <td>Сучасний живопис</td>
+                <td>Ван Гог, Мунк</td>
+            </tr>
+        </table>
 
-    <p><a href="index.html" style="color: darkred;">Назад на головну</a></p>
+        <a href="gallery.html#galleryTable">Перейти до галереї картин</a>
+
+    </main>
+
+    <footer class="footer">
+    </footer>
 
 </body>
 
