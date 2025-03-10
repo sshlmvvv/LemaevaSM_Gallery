@@ -18,9 +18,12 @@ header {
     text-align: center;
 }
 
-.nav_link {
+a {
     color: white;
     text-decoration: none !important;
+}
+
+.nav_link {
     font-size: 18px;
     padding: 20px;
 }
