@@ -1,68 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: "EB Garamond", serif;
     font-size: 20px;
-    margin: 0;
-    padding: 0;
     background-color: #cdfffd;
     color: #000000;
+    font-style: normal;
 }
 
-.header {
+header {
     background-color: #004650;
     padding: 15px 0;
     text-align: center;
 }
 
-.nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
 .nav_link {
     color: white;
-    text-decoration: none;
+    text-decoration: none !important;
     font-size: 18px;
-    transition: color 0.3s;
+    padding: 20px;
 }
 
 .nav_link:hover {
     color: #653ffc;
 }
 
-.nav_link_active {
-    font-weight: bold;
-    border-bottom: 2px solid #653ffc;
-}
-
 .main {
-    max-width: 900px;
-    margin: 40px auto;
     padding: 20px;
     text-align: center;
 }
 
-.main_title {
+h1 {
     font-size: 35px;
     color: #368a80;
     text-align: center;
 }
 
 .main_descr {
+    color: #202020;
     font-size: 25px;
     margin-bottom: 20px;
 }
 
-.main_subtitle {
+h2 {
     font-size: 25px;
     color: #113949;
     margin-top: 30px;
-}
-
-.frame_container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
 }
 
 .frame {
@@ -72,58 +59,27 @@ body {
     border: 3px solid #84f5e8;
 }
 
-.indx_gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+.indx_gallery_img {
+    width: 300px;
+    border-radius: 10px;
+    margin: 50px;
 }
 
 .indx_gallery_item {
-    display: block;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-}
-
-.indx_gallery_item:hover {
-    transform: scale(1.1);
-}
-
-.indx_gallery_img {
-    width: 250px;
-    height: auto;
-    border-radius: 10px;
-}
-
-.footer {
-    background-color: #004650;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
+    text-decoration: none;
 }
 
 .gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
     list-style: none;
 }
 
 .gallery_item {
-    transition: transform 0.3s ease-in-out;
-}
-
-.gallery_item:hover {
-    transform: scale(1.1);
+    margin: 50px;
 }
 
 .gallery_img {
-    width: 200px;
+    width: 300px;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #galleryTable {
@@ -146,7 +102,6 @@ body {
     font-weight: bold;
     font-size: 25px;
     color: #113949;
-    margin-top: 30px;
 }
 
 .table_header {
@@ -155,7 +110,7 @@ body {
 }
 
 .table_img {
-    width: 150px;
+    width: 200px;
 }
 
 .table_link {
@@ -179,72 +134,18 @@ body {
     color: #653ffc;
 }
 
-.contact {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 25px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    text-align: center;
-}
-
-.contact_form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact_label {
-    font-weight: bold;
-    text-align: left;
-    display: block;
-}
-
-.contact_input,
-.contact_textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.contact_textarea {
-    height: 150px;
-    resize: none;
-}
-
-.contact_button {
-    background-color: #264653;
-    color: white;
-    border: none;
-    padding: 12px;
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    font-family: inherit;
-}
-
-.contact_button:hover {
-    background-color: #653ffc;
-}
-
 .ab_main {
-    max-width: 90%;
+    max-width: 95%;
     margin: 20px auto;
     padding: 20px;
     background-color: #f2fdff;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .link {
     color: #004650;
     font-weight: bold;
     text-decoration: none;
-    transition: color 0.3s;
 }
 
 .link:hover {
@@ -252,21 +153,36 @@ body {
 }
 
 .list {
-    padding-left: 20px;
+    font-family: "Marck Script", cursive;
+    font-size: 21px;
+    color: #000000;
+    background-color: #e6fffe;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #abdddb;
+}
+
+.list_ord {
+    list-style: decimal;
+    padding-left: 30px;
 }
 
 .list_unord {
     list-style: square;
+    padding-left: 30px;
 }
 
-.list_item {
+.list_item,
+dd {
     margin-bottom: 5px;
+    font-weight: bold;
+    color: #653ffc;
 }
 
-.descr_list_title {
+dt {
     font-weight: bold;
-    font-size: 18px;
     margin-top: 10px;
+    color: #368a80;
 }
 
 #aboutTable {
