@@ -30,6 +30,11 @@ body {
     color: #653ffc;
 }
 
+.nav_link_active {
+    font-weight: bold;
+    border-bottom: 2px solid #653ffc;
+}
+
 .main {
     max-width: 900px;
     margin: 40px auto;
@@ -40,6 +45,7 @@ body {
 .main_title {
     font-size: 35px;
     color: #368a80;
+    text-align: center;
 }
 
 .main_descr {
@@ -137,8 +143,10 @@ body {
 }
 
 .table_caption {
-    font-size: 22px;
     font-weight: bold;
+    font-size: 25px;
+    color: #113949;
+    margin-top: 30px;
 }
 
 .table_header {
@@ -169,4 +177,101 @@ body {
 
 .main_link:hover {
     color: #653ffc;
+}
+
+.contact {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact_label {
+    font-weight: bold;
+    text-align: left;
+    display: block;
+}
+
+.contact_input,
+.contact_textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact_textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact_button {
+    background-color: #264653;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+.contact_button:hover {
+    background-color: #653ffc;
+}
+
+.ab_main {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f2fdff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.link {
+    color: #004650;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.link:hover {
+    color: #653ffc;
+}
+
+.list {
+    padding-left: 20px;
+}
+
+.list_unord {
+    list-style: square;
+}
+
+.list_item {
+    margin-bottom: 5px;
+}
+
+.descr_list_title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#aboutTable {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #25655e54;
+    background: #e6fffe;
 }
