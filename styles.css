@@ -18,18 +18,31 @@ header {
     text-align: center;
 }
 
-a {
+nav a {
     color: white;
-    text-decoration: none !important;
-}
-
-.nav_link {
+    text-decoration: none;
     font-size: 18px;
     padding: 20px;
 }
 
-.nav_link:hover {
+nav a:hover {
     color: #653ffc;
+}
+
+nav>a:hover {
+    color: #fc3fe3;
+}
+
+i+b {
+    color: #19f3f7;
+}
+
+i>b {
+    color: #42f719;
+}
+
+.main_descr i {
+    color: #f73c52;
 }
 
 .main {
