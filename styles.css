@@ -154,14 +154,56 @@ h2 {
     border-radius: 10px;
 }
 
-.link {
-    color: #004650;
+.ab_main a {
     font-weight: bold;
     text-decoration: none;
 }
 
-.link:hover {
+.ab_main a:link {
     color: #653ffc;
+    border-bottom: 1px dashed #653ffc;
+}
+
+.ab_main a:visited {
+    color: #5c005c;
+    border-bottom: 1px dashed #5c005c;
+}
+
+.ab_main a:hover {
+    color: #560094;
+    background-color: #a993ff4e;
+    cursor: pointer;
+}
+
+.ab_main a:active {
+    color: #eeff5a;
+}
+
+.about_us {
+    color: #202020;
+    font-size: 25px;
+
+}
+
+.about_us p:first-child {
+    background-color: #cbbeff;
+    font-style: italic;
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.main_subtitle {
+    text-align: center;
+    padding-left: 30px;
+    position: relative;
+}
+
+.main_subtitle::after {
+    content: " 💗";
+    font-size: 25px;
+    position: relative;
 }
 
 .list {
@@ -191,10 +233,22 @@ dd {
     color: #653ffc;
 }
 
+dd::before {
+    content: "🖌️";
+    font-size: 25px;
+    position: relative;
+}
+
 dt {
     font-weight: bold;
     margin-top: 10px;
     color: #368a80;
+}
+
+dt::before {
+    content: "🎨";
+    font-size: 25px;
+    position: relative;
 }
 
 #aboutTable {
