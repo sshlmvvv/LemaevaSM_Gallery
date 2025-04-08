@@ -265,14 +265,15 @@ dt::before {
 
 .artist_block.f {
     position: relative;
-    top: 0;
+    left: 50px;
+    top: 20px;
     width: 500px;
 }
 
 .artist_block.s {
     position: relative;
     left: 400px;
-    top: -50px;
+    top: -20px;
     width: 500px;
 }
 
