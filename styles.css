@@ -257,3 +257,38 @@ dt::before {
     border: 2px solid #25655e54;
     background: #e6fffe;
 }
+
+.artist_block {
+    background-color: #d4f2fa;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.artist_block.f {
+    position: relative;
+    top: 0;
+    width: 500px;
+}
+
+.artist_block.s {
+    position: relative;
+    left: 400px;
+    top: -50px;
+    width: 500px;
+}
+
+.artist_block span {
+    color: #12007b;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.artist_block {
+    margin-bottom: 10px;
+}
+
+.floating {
+    height: 100px;
+    float: right;
+}
