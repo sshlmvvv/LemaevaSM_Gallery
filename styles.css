@@ -197,13 +197,11 @@ h2 {
 .main_subtitle {
     text-align: center;
     padding-left: 30px;
-    position: relative;
 }
 
 .main_subtitle::after {
     content: " 💗";
     font-size: 25px;
-    position: relative;
 }
 
 .list {
