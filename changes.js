@@ -39,3 +39,18 @@ function BInsideI() {
 }
 
 BInsideI();
+
+const listUnord = document.querySelector(".list_unord");
+listUnord.innerHTML += "<li class='list_item'>Абстракціонізм</li>";
+
+const museumsTitle = document.querySelectorAll("h2.main_subtitle")[0];
+museumsTitle.outerHTML = "<h2 class='main_subtitle'>Найвідоміші музеї світу 🖼️</h2>";
+
+const firstArtistBlock = document.querySelector(".artist_block.f p span");
+console.log(firstArtistBlock.textContent);
+firstArtistBlock.textContent = "емоційній насиченості";
+
+const artistName = document.querySelector("dt");
+console.log(artistName.firstChild.nodeValue);
+artistName.firstChild.nodeValue = "Леонардо да Вінчі 🎨";
+

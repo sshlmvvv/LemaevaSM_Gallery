@@ -7,7 +7,7 @@
     <meta name="author" content="ІС-32 Лємаєва Олександра">
     <title>Контакти</title>
     <link rel="stylesheet" href="./styles.css">
-    <script src="contact.js" defer></script>
+    <script src="contact.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
@@ -16,7 +16,6 @@
 </head>
 
 <body>
-
     <header class="header">
         <nav class="nav">
             <a href="index.html" class="nav_link">Головна</a>
@@ -26,10 +25,68 @@
         </nav>
     </header>
 
-    <main class="contact"></main>
+    <main class="contact">
+        <div id="contactContent"></div>
+    </main>
 
     <footer class="footer">
     </footer>
+
+    <script>
+        const addressSection = document.createElement("section");
+        addressSection.className = "contact_section";
+
+        const addressTitle = document.createElement("h2");
+        const addressTitleText = document.createTextNode("Адреса:");
+        addressTitle.appendChild(addressTitleText);
+
+        const addressContent = document.createElement("p");
+        addressContent.appendChild(document.createTextNode("вул. Мистецька, 12, Київ, Україна"));
+
+        addressSection.append(addressTitle, addressContent);
+
+        document.getElementById("contactContent").append(addressSection);
+
+        const welcomeMsg = document.createElement("p");
+        welcomeMsg.appendChild(document.createTextNode("Завітайте до нашої картинної галереї — ми завжди раді гостям!"));
+        document.getElementById("contactContent").prepend(welcomeMsg);
+
+        const scheduleSection = document.createElement("section");
+        scheduleSection.className = "contact_section";
+
+        const scheduleTitle = document.createElement("h2");
+        scheduleTitle.textContent = "Графік роботи:";
+
+        const scheduleText = document.createElement("p");
+        scheduleText.textContent = "Пн-Нд: 10:00 - 18:00 (без перерви)";
+
+        scheduleSection.append(scheduleTitle, scheduleText);
+
+        addressSection.after(scheduleSection);
+
+        const newWelcome = document.createElement("p");
+        newWelcome.textContent = "Ласкаво просимо до нашої картинної галереї сучасного мистецтва!";
+        welcomeMsg.replaceWith(newWelcome);
+
+        const oldAddress = document.createElement("div");
+        oldAddress.className = "contact_section old_address";
+
+        const oldTitle = document.createElement("h2");
+        oldTitle.textContent = "Стара адреса (неактуальна):";
+
+        const oldText = document.createElement("p");
+        oldText.textContent = "вул. Художня, 5, Київ";
+
+        oldAddress.append(oldTitle, oldText);
+        document.getElementById("contactContent").append(oldAddress);
+
+        setTimeout(() => {
+            oldAddress.remove();
+        }, 3000);
+
+        document.write('<p style="text-align:center; margin-top: 20px;">Контактна інформація галереї завантажена та оновлена</p>');
+
+    </script>
 
 </body>
 
