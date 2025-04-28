@@ -68,13 +68,18 @@
             </p>
         </div>
 
+        <div id="galleryMenu">
+            <button data-action="showGalleryInfo">Про нашуууу галерею</button>
+            <button data-action="highlightArtDirections">Підсвітити мистецькі напрями</button>
+            <button data-action="listFamousArtists">Відомі художники нашого світу</button>
+        </div>
 
         <h2 class="main_subtitle">Відомі музеї</h2>
-        <ol class="list list_ord">
-            <li class="list_item">Лувр (Франція)</li>
-            <li class="list_item">Метрополітен-музей (США)</li>
-            <li class="list_item">Національна галерея (Велика Британія)</li>
-            <li class="list_item">Прадо (Іспанія)</li>
+        <ol class="list list_ord" id="museumList">
+            <li class="list_item" data-behavior="show-louvre">Лувр (Франція)</li>
+            <li class="list_item" data-behavior="show-metro">Метрополітен-музей (США)</li>
+            <li class="list_item" data-behavior="show-natgall">Національна галерея (Велика Британія)</li>
+            <li class="list_item" data-behavior="show-prado">Прадо (Іспанія)</li>
         </ol>
 
         <h2 class="main_subtitle">Мистецькі напрями</h2>
@@ -194,6 +199,77 @@
         } else {
             alert("Навіть якщо ні — сподіваємося, що ми Вас здивуємо :)");
         }
+
+         const artList = document.querySelector('ul.list_unord');
+
+            artList.onclick = function (event) {
+                const target = event.target;
+
+                if (target.tagName === 'LI') {
+                    const allItems = artList.querySelectorAll('li');
+                    allItems.forEach(item => {
+                        item.style.backgroundColor = '';
+                    });
+
+                    target.style.backgroundColor = '#ffc7ee';
+                }
+            };
+
+                function showGalleryInfo() {
+                    alert("Наша галерея об'єднує класичне та сучасне мистецтво. Натхнення у кожному творі!");
+                }
+
+                function highlightArtDirections() {
+                    const list = document.querySelector('.list_unord');
+                    if (list) {
+                        list.style.backgroundColor = '#fef3c7';
+                        list.style.padding = '10px';
+                        alert("Мистецькі напрями підсвічено!");
+                    }
+                }
+
+                function listFamousArtists() {
+                    const artists = ["Леонардо да Вінчі", "Вінсент ван Гог", "Едвард Мунк", "Пабло Пікассо"];
+                    alert("Відомі художники галереї:\n" + artists.join(", "));
+                }
+
+                const galleryMenu = document.getElementById('galleryMenu');
+
+                galleryMenu.onclick = function (event) {
+                    const button = event.target.closest('button');
+                    if (!button) return; 
+                    const action = button.dataset.action;
+
+                    if (action && typeof window[action] === "function") {
+                        window[action]();
+                    }
+                };
+
+                 const museumList = document.getElementById('museumList');
+
+                    museumList.addEventListener('click', function (event) {
+                        const item = event.target.closest('li');
+                        if (!item) return;
+
+                        const behavior = item.dataset.behavior;
+
+                        switch (behavior) {
+                            case 'show-louvre':
+                                alert("Лувр — найбільший музей мистецтва у світі, розташований у Парижі.");
+                                break;
+                            case 'show-metro':
+                                alert("Метрополітен-музей у Нью-Йорку — одна з найвідоміших колекцій світу.");
+                                break;
+                            case 'show-natgall':
+                                alert("Національна галерея в Лондоні славиться картинами європейських майстрів.");
+                                break;
+                            case 'show-prado':
+                                alert("Прадо в Мадриді — музей класичного іспанського мистецтва.");
+                                break;
+                            default:
+                                alert("Про цей музей ще немає інформації.");
+                        }
+                    });
     </script>
 
 

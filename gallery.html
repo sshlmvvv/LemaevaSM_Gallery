@@ -61,7 +61,7 @@
                 <th class="table_header">Таємна вечеря</th>
             </tr>
             <tr class="table_row">
-                <td class="table_cell"><img src="images/monalisa_small.jpg" alt="Мона Ліза" class="table_img"onclick="showMessage()></td>
+                <td class="table_cell"><img src="images/monalisa_small.jpg" alt="Мона Ліза" class="table_img" onclick="showMessage()"></td>
                 <td class="table_cell"><img src="images/starrynight_small.jpg" alt="Зоряна ніч" class="table_img">
                 </td>
                 <td class="table_cell"><img src="images/thescream_small.jpg" alt="Крик" class="table_img"></td>
@@ -91,18 +91,15 @@
     </footer>
 
     <script>
-        // 1. Функція-обробник через атрибут (onclick)
         function showMessage() {
             alert("Це картина 'Мона Ліза'. Автор: Леонардо да Вінчі.");
         }
 
-        // 2. Функція-обробник через властивість
         const scream = document.querySelector('table img[alt="Крик"]');
         scream.onmouseenter = function () {
             alert("Це картина 'Крик'. Автор: Едвард Мунк.");
         };
 
-        // 3. Використати addEventListener, призначити одній події кілька обробників
         const starryNight = document.querySelector('table img[alt="Зоряна ніч"]');
 
         function firstHandler() {
@@ -116,7 +113,6 @@
         starryNight.addEventListener('mouseover', firstHandler);
         starryNight.addEventListener('mouseover', secondHandler);
 
-        // 4. Призначити обробником події об'єкт із методом handleEvent
         const lastSupper = document.querySelector('table img[alt="Таємна вечеря"]');
 
         const paintingHandler = {
@@ -128,11 +124,10 @@
 
         lastSupper.addEventListener('click', paintingHandler);
 
-        // 5. Видалити об'єкт-обробник через removeEventListener через 10 секунд
         //setTimeout(() => {
             //lastSupper.removeEventListener('click', paintingHandler);
-           // console.log("Обробник для 'Таємна вечеря' видалено.");
-      //  }, 10000); // 10 секунд
+           //console.log("Обробник для 'Таємна вечеря' видалено.");
+       // }, 30000); 
     </script>
 
 </body>

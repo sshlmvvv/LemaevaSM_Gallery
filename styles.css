@@ -336,3 +336,22 @@ button:hover {
     left: 100%;
     transition: left 0.8s ease-in-out;
 }
+
+#galleryMenu {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+}
+
+#galleryMenu button {
+    font-family: 'EB Garamond', serif;
+    background-color: #a582ff;
+    border: 1px solid #5f5f5f;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#galleryMenu button:hover {
+    background-color: #9a3bff;
+}

@@ -1,30 +1,30 @@
-function dialogWithUser() {
-  let ticketType;
-  let price;
+// function dialogWithUser() {
+//   let ticketType;
+//   let price;
 
-  while (true) {
-    ticketType = prompt(
-      "Оберіть тип квитка: звичайний / студентський / VIP"
-    ).toLowerCase();
+//   while (true) {
+//     ticketType = prompt(
+//       "Оберіть тип квитка: звичайний / студентський / VIP"
+//     ).toLowerCase();
 
-    if (ticketType === "звичайний") {
-      price = 300;
-      break;
-    } else if (ticketType === "студентський") {
-      price = 150;
-      break;
-    } else if (ticketType === "vip") {
-      price = 600;
-      break;
-    } else {
-      alert("Невідомий тип квитка. Спробуйте ще раз.");
-    }
-  }
+//     if (ticketType === "звичайний") {
+//       price = 300;
+//       break;
+//     } else if (ticketType === "студентський") {
+//       price = 150;
+//       break;
+//     } else if (ticketType === "vip") {
+//       price = 600;
+//       break;
+//     } else {
+//       alert("Невідомий тип квитка. Спробуйте ще раз.");
+//     }
+//   }
 
-  alert("Вартість вашого квитка: " + price + " грн.");
-}
+//   alert("Вартість вашого квитка: " + price + " грн.");
+// }
 
-dialogWithUser();
+// dialogWithUser();
 
 function compareArtStyles() {
   let style1 = prompt("Введіть перший художній напрям:");
