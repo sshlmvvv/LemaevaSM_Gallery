@@ -184,21 +184,21 @@
     </footer>
 
     <script>
-        alert("Ласкаво просимо до нашої картинної галереї!");
+        // alert("Ласкаво просимо до нашої картинної галереї!");
 
-        let userName = prompt("Як Вас звати?");
-        if (userName) {
-            alert("Раді бачити Вас, " + userName + "!");
-        } else {
-            alert("Раді вітати Вас у галереї!");
-        }
+        // let userName = prompt("Як Вас звати?");
+        // if (userName) {
+        //     alert("Раді бачити Вас, " + userName + "!");
+        // } else {
+        //     alert("Раді вітати Вас у галереї!");
+        // }
 
-        let interested = confirm("Чи цікавитесь Ви живописом?");
-        if (interested) {
-            alert("Чудово! У нас є що Вам показати.");
-        } else {
-            alert("Навіть якщо ні — сподіваємося, що ми Вас здивуємо :)");
-        }
+        // let interested = confirm("Чи цікавитесь Ви живописом?");
+        // if (interested) {
+        //     alert("Чудово! У нас є що Вам показати.");
+        // } else {
+        //     alert("Навіть якщо ні — сподіваємося, що ми Вас здивуємо :)");
+        // }
 
          const artList = document.querySelector('ul.list_unord');
 
@@ -214,6 +214,7 @@
                     target.style.backgroundColor = '#ffc7ee';
                 }
             };
+
 
                 function showGalleryInfo() {
                     alert("Наша галерея об'єднує класичне та сучасне мистецтво. Натхнення у кожному творі!");
@@ -233,6 +234,8 @@
                     alert("Відомі художники галереї:\n" + artists.join(", "));
                 }
 
+
+
                 const galleryMenu = document.getElementById('galleryMenu');
 
                 galleryMenu.onclick = function (event) {
@@ -244,6 +247,8 @@
                         window[action]();
                     }
                 };
+
+
 
                  const museumList = document.getElementById('museumList');
 
@@ -271,8 +276,6 @@
                         }
                     });
     </script>
-
-
 </body>
 
 </html>
