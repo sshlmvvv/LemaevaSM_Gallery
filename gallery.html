@@ -91,46 +91,31 @@
     </footer>
 
     <script>
-        function showMessage() {
-            alert("Це картина 'Мона Ліза'. Автор: Леонардо да Вінчі.");
-        }
+        // function showMessage() {
+        //     alert("Це картина 'Мона Ліза'. Автор: Леонардо да Вінчі.");
+        // }
+        // const scream = document.querySelector('table img[alt="Крик"]');
+        // scream.onmouseenter = function () {
+        //     alert("Це картина 'Крик'. Автор: Едвард Мунк.");
+        // };
+        // const starryNight = document.querySelector('table img[alt="Зоряна ніч"]');
+        // function firstHandler() {
+        //     console.log("Навели мишу на 'Зоряна ніч'.");
+        // }
+        // function secondHandler() {
+        //     console.log("Чудова робота Вінсента ван Гога!");
+        // }
+        // starryNight.addEventListener('mouseover', firstHandler);
+        // starryNight.addEventListener('mouseover', secondHandler);
+        // const lastSupper = document.querySelector('table img[alt="Таємна вечеря"]');
+        // const paintingHandler = {
+        //     handleEvent(event) {
+        //         alert(`Ви обрали картину: ${event.currentTarget.alt}`);
+        //         console.log("Спрацював обробник на:", event.currentTarget);
+        //     }
+        // };
+        // lastSupper.addEventListener('click', paintingHandler);
 
-        const scream = document.querySelector('table img[alt="Крик"]');
-        scream.onmouseenter = function () {
-            alert("Це картина 'Крик'. Автор: Едвард Мунк.");
-        };
-
-
-        const starryNight = document.querySelector('table img[alt="Зоряна ніч"]');
-
-        function firstHandler() {
-            console.log("Навели мишу на 'Зоряна ніч'.");
-        }
-
-        function secondHandler() {
-            console.log("Чудова робота Вінсента ван Гога!");
-        }
-
-        starryNight.addEventListener('mouseover', firstHandler);
-        starryNight.addEventListener('mouseover', secondHandler);
-
-
-        const lastSupper = document.querySelector('table img[alt="Таємна вечеря"]');
-
-        const paintingHandler = {
-            handleEvent(event) {
-                alert(`Ви обрали картину: ${event.currentTarget.alt}`);
-                console.log("Спрацював обробник на:", event.currentTarget);
-            }
-        };
-
-        lastSupper.addEventListener('click', paintingHandler);
-
-        
-        //setTimeout(() => {
-            //lastSupper.removeEventListener('click', paintingHandler);
-           //console.log("Обробник для 'Таємна вечеря' видалено.");
-       // }, 30000); 
     </script>
 
 </body>

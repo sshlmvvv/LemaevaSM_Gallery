@@ -175,8 +175,19 @@
         <div>
             <button onclick="redirectToPage()">Не тільки про картини! Пориньте у сучасний український балет</button>
         </div>
-        
 
+        <div id="draggableArt1" class="draggable">
+            <img src="./images/lastsupper_small.jpg" alt="Квіти" class="artwork">
+        </div>
+        <div id="draggableArt2" class="draggable">
+            <img src="./images/monalisa_small.jpg" alt="Квіти" class="artwork">
+        </div>
+        <div id="draggableArt3" class="draggable">
+            <img src="./images/starrynight_small.jpg" alt="Квіти" class="artwork">
+        </div>
+        <div id="draggableArt4" class="draggable">
+            <img src="./images/thescream_small.jpg" alt="Квіти" class="artwork">
+        </div>
 
     </main>
 
@@ -184,97 +195,69 @@
     </footer>
 
     <script>
-        // alert("Ласкаво просимо до нашої картинної галереї!");
 
-        // let userName = prompt("Як Вас звати?");
-        // if (userName) {
-        //     alert("Раді бачити Вас, " + userName + "!");
-        // } else {
-        //     alert("Раді вітати Вас у галереї!");
-        // }
+        document.addEventListener("DOMContentLoaded", () => {
+            const listItems = document.querySelectorAll('.list_item');
 
-        // let interested = confirm("Чи цікавитесь Ви живописом?");
-        // if (interested) {
-        //     alert("Чудово! У нас є що Вам показати.");
-        // } else {
-        //     alert("Навіть якщо ні — сподіваємося, що ми Вас здивуємо :)");
-        // }
-
-         const artList = document.querySelector('ul.list_unord');
-
-            artList.onclick = function (event) {
-                const target = event.target;
-
-                if (target.tagName === 'LI') {
-                    const allItems = artList.querySelectorAll('li');
-                    allItems.forEach(item => {
-                        item.style.backgroundColor = '';
-                    });
-
-                    target.style.backgroundColor = '#ffc7ee';
-                }
-            };
-
-
-                function showGalleryInfo() {
-                    alert("Наша галерея об'єднує класичне та сучасне мистецтво. Натхнення у кожному творі!");
-                }
-
-                function highlightArtDirections() {
-                    const list = document.querySelector('.list_unord');
-                    if (list) {
-                        list.style.backgroundColor = '#fef3c7';
-                        list.style.padding = '10px';
-                        alert("Мистецькі напрями підсвічено!");
+            listItems.forEach(item => {
+                item.addEventListener('mouseover', (event) => {
+                    if (!event.relatedTarget || !item.contains(event.relatedTarget)) {
+                        event.target.style.backgroundColor = '#19f3f7';
+                        event.target.style.transform = 'scale(1.05)';
+                        event.target.style.transition = '0.3s ease';
                     }
-                }
+                });
 
-                function listFamousArtists() {
-                    const artists = ["Леонардо да Вінчі", "Вінсент ван Гог", "Едвард Мунк", "Пабло Пікассо"];
-                    alert("Відомі художники галереї:\n" + artists.join(", "));
-                }
-
-
-
-                const galleryMenu = document.getElementById('galleryMenu');
-
-                galleryMenu.onclick = function (event) {
-                    const button = event.target.closest('button');
-                    if (!button) return; 
-                    const action = button.dataset.action;
-
-                    if (action && typeof window[action] === "function") {
-                        window[action]();
+                item.addEventListener('mouseout', (event) => {
+                    if (!event.relatedTarget || !item.contains(event.relatedTarget)) {
+                        event.target.style.backgroundColor = '';
+                        event.target.style.transform = '';
                     }
-                };
+                });
+            });
+        });
 
 
+        let isDragging = false;
+            let offsetX = 0;
+            let offsetY = 0;
+            let currentElement = null;
 
-                 const museumList = document.getElementById('museumList');
+            function startDrag(e) {
+                currentElement = e.target.closest('.draggable');
+                if (!currentElement) return;
 
-                    museumList.addEventListener('click', function (event) {
-                        const item = event.target.closest('li');
-                        if (!item) return;
+                isDragging = true;
+                offsetX = e.clientX - currentElement.offsetLeft;
+                offsetY = e.clientY - currentElement.offsetTop;
+                currentElement.style.cursor = 'grabbing';
+            }
 
-                        const behavior = item.dataset.behavior;
+            function moveElement(e) {
+                if (isDragging && currentElement) {
+                    let posX = e.clientX - offsetX;
+                    let posY = e.clientY - offsetY;
+                    currentElement.style.left = posX + 'px';
+                    currentElement.style.top = posY + 'px';
+                }
+            }
 
-                        switch (behavior) {
-                            case 'show-louvre':
-                                alert("Лувр — найбільший музей мистецтва у світі, розташований у Парижі.");
-                                break;
-                            case 'show-metro':
-                                alert("Метрополітен-музей у Нью-Йорку — одна з найвідоміших колекцій світу.");
-                                break;
-                            case 'show-natgall':
-                                alert("Національна галерея в Лондоні славиться картинами європейських майстрів.");
-                                break;
-                            case 'show-prado':
-                                alert("Прадо в Мадриді — музей класичного іспанського мистецтва.");
-                                break;
-                            default:
-                                alert("Про цей музей ще немає інформації.");
-                        }
-                    });
+            function stopDrag() {
+                isDragging = false;
+                if (currentElement) {
+                    currentElement.style.cursor = 'move'; 
+                }
+                currentElement = null;
+            }
+
+            document.querySelectorAll('.draggable').forEach(element => {
+                element.addEventListener('mousedown', startDrag);
+            });
+
+            document.addEventListener('mousemove', moveElement);
+            document.addEventListener('mouseup', stopDrag);
+
+    
     </script>
 </body>
 

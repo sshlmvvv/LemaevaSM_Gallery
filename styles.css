@@ -354,4 +354,18 @@ button:hover {
 
 #galleryMenu button:hover {
     background-color: #9a3bff;
+    color: #19f3f7;
+}
+.draggable {
+    position: absolute;
+    cursor: move;
+}
+.artwork {
+    width: 200px;
+    height: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+.artwork:hover {
+    transform: scale(1.05);
 }
