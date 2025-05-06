@@ -176,17 +176,9 @@
             <button onclick="redirectToPage()">Не тільки про картини! Пориньте у сучасний український балет</button>
         </div>
 
-        <div id="draggableArt1" class="draggable">
-            <img src="./images/lastsupper_small.jpg" alt="Квіти" class="artwork">
-        </div>
-        <div id="draggableArt2" class="draggable">
-            <img src="./images/monalisa_small.jpg" alt="Квіти" class="artwork">
-        </div>
-        <div id="draggableArt3" class="draggable">
-            <img src="./images/starrynight_small.jpg" alt="Квіти" class="artwork">
-        </div>
-        <div id="draggableArt4" class="draggable">
-            <img src="./images/thescream_small.jpg" alt="Квіти" class="artwork">
+        <div class="draggable-block">
+            <p>Мистецтво живе в кожній деталі. У нашій галереї кожна картина розповідає свою історію, а ви — частина цієї
+                розповіді.</p>
         </div>
 
     </main>
@@ -218,46 +210,44 @@
         });
 
 
-        let isDragging = false;
-            let offsetX = 0;
-            let offsetY = 0;
-            let currentElement = null;
+        const block = document.querySelector('.draggable-block');
 
-            function startDrag(e) {
-                currentElement = e.target.closest('.draggable');
-                if (!currentElement) return;
+            block.onmousedown = function (event) {
+                // Відстань між курсором і верхнім лівим кутом блоку
+                let shiftX = event.clientX - block.getBoundingClientRect().left;
+                let shiftY = event.clientY - block.getBoundingClientRect().top;
 
-                isDragging = true;
-                offsetX = e.clientX - currentElement.offsetLeft;
-                offsetY = e.clientY - currentElement.offsetTop;
-                currentElement.style.cursor = 'grabbing';
-            }
-
-            function moveElement(e) {
-                if (isDragging && currentElement) {
-                    let posX = e.clientX - offsetX;
-                    let posY = e.clientY - offsetY;
-                    currentElement.style.left = posX + 'px';
-                    currentElement.style.top = posY + 'px';
+                // Переміщуємо блок на нову позицію
+                function moveAt(pageX, pageY) {
+                    block.style.left = pageX - shiftX + 'px';
+                    block.style.top = pageY - shiftY + 'px';
                 }
-            }
 
-            function stopDrag() {
-                isDragging = false;
-                if (currentElement) {
-                    currentElement.style.cursor = 'move'; 
+                // Початкове переміщення
+                moveAt(event.pageX, event.pageY);
+
+                // Подія для переміщення
+                function onMouseMove(event) {
+                    moveAt(event.pageX, event.pageY);
                 }
-                currentElement = null;
-            }
 
-            document.querySelectorAll('.draggable').forEach(element => {
-                element.addEventListener('mousedown', startDrag);
-            });
+                // Слухаємо подію переміщення миші
+                document.addEventListener('mousemove', onMouseMove);
 
-            document.addEventListener('mousemove', moveElement);
-            document.addEventListener('mouseup', stopDrag);
+                // Коли миша відпускається, зупиняємо переміщення
+                block.onmouseup = function () {
+                    document.removeEventListener('mousemove', onMouseMove);
+                    block.onmouseup = null;
+                };
+            };
 
-    
+            // Запобігаємо стандартному дії drag-and-drop
+            block.ondragstart = function () {
+                return false;
+            };
+
+
+
     </script>
 </body>
 
