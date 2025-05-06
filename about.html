@@ -213,35 +213,28 @@
         const block = document.querySelector('.draggable-block');
 
             block.onmousedown = function (event) {
-                // Відстань між курсором і верхнім лівим кутом блоку
                 let shiftX = event.clientX - block.getBoundingClientRect().left;
                 let shiftY = event.clientY - block.getBoundingClientRect().top;
 
-                // Переміщуємо блок на нову позицію
                 function moveAt(pageX, pageY) {
                     block.style.left = pageX - shiftX + 'px';
                     block.style.top = pageY - shiftY + 'px';
                 }
 
-                // Початкове переміщення
                 moveAt(event.pageX, event.pageY);
 
-                // Подія для переміщення
                 function onMouseMove(event) {
                     moveAt(event.pageX, event.pageY);
                 }
 
-                // Слухаємо подію переміщення миші
                 document.addEventListener('mousemove', onMouseMove);
 
-                // Коли миша відпускається, зупиняємо переміщення
                 block.onmouseup = function () {
                     document.removeEventListener('mousemove', onMouseMove);
                     block.onmouseup = null;
                 };
             };
 
-            // Запобігаємо стандартному дії drag-and-drop
             block.ondragstart = function () {
                 return false;
             };
